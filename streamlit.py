@@ -19,7 +19,7 @@ user_input=st.text_input("Ask a question")
 if st.button("Submit"):
     with st.spinner("Agent is thinking..."):
         response = client.models.generate_content(
-            model='gemini-flash-lite-latest', contents=user_input,
+            model='gemini-3.8-flash', contents=user_input,
             config=types.GenerateContentConfig(
                 system_instruction=SYSTEM_PROMPT
                 )
